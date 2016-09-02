@@ -1,0 +1,18 @@
+Escape characters in java:Escape characters are part of the syntax for many programming languages, 
+data formats, and communication protocols.
+EX:
+\t: insert a tab in the text at this point 
+\b: insert a backspace in the text at this point
+\n: insert a new line in the text at this point
+\r: insert a carriage return in the text at this point
+\': insert a single quote at this point 
+\\: insert a backslash at this point 
+\f: insert a form feed at this point 
+\v: insert a vertical tab at this point 
+\0: insert a null character at this point 
+\": insert a double quote at this point 
+ASCII ART: Art graphic design udrd computers for presentation and consists of pictures pieced togetherand 
+consists of pictures pieced together from the 95 printable (from a total of 128) characters
+
+ASCII art is used wherever text can be more readily printed or transmitted than graphics, or in some cases, 
+where the transmission of pictures is not possible. 
