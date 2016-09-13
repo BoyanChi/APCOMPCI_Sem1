@@ -15,7 +15,7 @@ public class EX_03
 		//search for the next integer that the user enters
 		int t = keyboard.nextInt();
 	
-		int height = t*3.28;
+		double height = t*3.28;
 		
 		System.out.println("your height is" + " " + height + " " + "in feet.");
 		
