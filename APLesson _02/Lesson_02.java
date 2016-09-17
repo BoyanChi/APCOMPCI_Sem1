@@ -5,7 +5,7 @@ public class Lesson_02
 		int a = 7;
 		int b = 9;
 		
-		System.out.println(a*b);
+		System.out.println("a multiplies by b equal to" + a*b);
 		
 		
 		String the = "3710";
@@ -15,7 +15,7 @@ public class Lesson_02
 		String HS = "CA";
 		String is ="92130";
 		
-		System.out.println(the + " " + address + " " + of + " " + TP + " " + HS + " " + is);
+		System.out.println(the + "," + address + " " + of\nTP\nHS + "," + is);
 		
 		
 		int l = 2;
@@ -24,7 +24,7 @@ public class Lesson_02
 		int n = 2;
 		int SArea = n*w*h+n*w*l+n*h*l;
 		
-		System.out.println("The surface area of your rectangle is" + " " +SArea);
+		System.out.println("The surface area of your rectangle is " +SArea);
 	
 	}
 }
