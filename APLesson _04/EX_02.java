@@ -53,7 +53,7 @@ public class EX_02
 	
 	public void format(String primary, String secondary)
 	{
-	     System.out.printf("\n*\t%15s\t%25s*", primary, secondary);
+	     System.out.printf("\n*\t%15s\t%17s*", primary, secondary);
 	}
 		
 }
