@@ -6,21 +6,21 @@ public class EX_02
 	{
 
 		
-		//instantiates the new Scanner object "keyboard"
+		
 		Scanner keyboard = new Scanner(System.in);
 		
-		//prompts for user input
-		System.out.println("Please tell me your height in meters.");
 		
-		//search for the next integer that the user enters
-		int meters = keyboard.nextInt();
+		System.out.println("Please tell me your height in inches.");
 		
 		
-		System.out.println("Please tell me your weight in kilograms.");
+		double inch = keyboard.nextInt();
 		
-		//search for the next integer that the user enters
-		int kilograms = keyboard.nextInt();
-		int BMI = kilograms/meters/meters;
+		
+		System.out.println("Please tell me your weight in lbs.");
+		
+		
+		double lb = keyboard.nextInt();
+		double BMI = lb/inch/inch*703;
 		
 		System.out.println("your BMI is" + " " + BMI + ".");
 		
