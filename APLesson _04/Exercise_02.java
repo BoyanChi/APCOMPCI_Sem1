@@ -16,7 +16,7 @@ public class Exercise_02
 		System.out.println("What's your second number?");
 		num2 = keyboard.nextDouble();
 		
-		System.out.println("What's your first number?");
+		System.out.println("What's your third number?");
 		num3 = keyboard.nextDouble();
 		
 		average();
