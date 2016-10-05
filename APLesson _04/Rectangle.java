@@ -11,7 +11,9 @@ public class Rectangle
 		System.out.println("What's the width of the rectangle in feet?");
 		double w = keyboard.nextDouble();
 		
-		print(calcPerim(l,w));
+		double per = Rectangle.calcPerim(l,w);
+		
+		System.out.printf("Your rectangle is %6.5f ft around.",per);
 		
 	}
 	
@@ -19,8 +21,5 @@ public class Rectangle
 	{
 		return 2*(l+w);
 	}
-	public static void print(double perimeter)
-	{
-		System.out.println("Your rectangle is " + perimeter + "ft around.");
-	}
+	
 }

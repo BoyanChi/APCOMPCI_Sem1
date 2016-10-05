@@ -9,8 +9,8 @@ public class Cube
 		double side = keyboard.nextDouble();
 		    
 			
-		double sa = Cube.calcSurf (num1, num2, num3);
-		System.out.printf("The surface area of a cube whose sides are %6.5f in length is %6.5f);
+		double sa = Cube.calcSurf (side);
+		System.out.printf("The surface area of a cube whose sides are %6.5f in length is %6.5f",side,sa);
 	}
 	
 	public static double calcSurf(double side)

@@ -9,19 +9,15 @@ public class Circle
 		System.out.println("What's the radius of your circle?");
 		double r = keyboard.nextDouble();
 		    
-			
-		print(calcArea(r));
+		double area = Circle.calcArea (r);	
+		
+		System.out.printf("The surface area of a cube with a radius of %6.5f is %6.5f",r,area);
+		
 	}
 	
 	public static double calcArea(double r)
 	{
 		return 3.14*r;
 	}
-	public static void print(double area)
-	{
-		
-		
-		System.out.println("The surface area of a cube with " + "return r;" + " sides is " + area);
-		
-	}
+	
 }
