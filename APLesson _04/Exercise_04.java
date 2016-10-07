@@ -20,7 +20,7 @@ public class Exercise_04
 	
 	public static void calcArea()
 	{
-		area = 3.14*r;
+		area = 3.14*Math.pow(r,2);
 	}
 	public static void print()
 	{

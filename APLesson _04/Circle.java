@@ -17,7 +17,7 @@ public class Circle
 	
 	public static double calcArea(double r)
 	{
-		return 3.14*r;
+		return 3.14*Math.pow(r,2);
 	}
 	
 }
