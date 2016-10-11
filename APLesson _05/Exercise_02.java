@@ -4,7 +4,7 @@ public class Exercise_02
 		
 	public static void main(String[]args)
 	{
-		Exercise_02 price = new Exercise_02();
+		Exercise_02 form = new Exercise_02();
 		Scanner keyboard = new Scanner(System.in);
 		
 		System.out.println("What's your first item?");
@@ -13,20 +13,26 @@ public class Exercise_02
 		System.out.println("What's the price of it?");
 		double Price1 = keyboard.nextDouble();
 		
+		keyboard.nextLine();
 		System.out.println("What's your second item?");
 		String Item2 = keyboard.nextLine();
+		
 		
 		System.out.println("What's the price of it?");
 		double Price2 = keyboard.nextDouble();
 		
+		keyboard.nextLine();
 		System.out.println("What's your third item?");
 		String Item3 = keyboard. nextLine();
+
 		
 		System.out.println("What's the price of it?");
 		double Price3 = keyboard.nextDouble();
 		
+		keyboard.nextLine();
 		System.out.println("What's your forth item?");
 		String Item4 = keyboard. nextLine();
+		
 		
 		System.out.println("What's the price of it?");
 		double Price4 = keyboard.nextDouble();
@@ -37,7 +43,7 @@ public class Exercise_02
 		
 		String Item6 = "Discount"; 
 		
-		double Price6 = price.discount(Price5);
+		double Price6 = discount(Price5);
 		
 		String Item7 = "Tax";
 
@@ -69,24 +75,31 @@ public class Exercise_02
 		form.format(Item7, Price7);
 		System.out.println("\n");
 		form.format(Item8, Price8);
+		System.out.println("\n");
 		System.out.println("_______________________________________________");
 		System.out.println("\n");
 		System.out.println("Thank you");
-			
-			
+	}		
 		
-		public static void discount(double price5);
+	static double Price6;		
+	static double Price5;	
+	public static double discount(double price5)
+	{
 		if (Price5>= 2000)
-			return Price5*0.15;
-		if (!Price5>= 2000)
-			return 0;
+		{
+			Price6 = Price5*0.15;
+		}
+		if (Price5< 2000)
+		{		
+	 		Price6 = 0;
+		}
+		return Price6;
+	}	
 		
-		
-	}
 	
 	public void format(String Item, double Price)
 	{
-		 System.out.printf("\n*%17s\t....... %10.2f", Item, Price);
+		System.out.printf("\n*%17s\t....... %10.2f", Item, Price);
 	}
 	
 }
