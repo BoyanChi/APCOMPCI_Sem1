@@ -4,6 +4,7 @@ public class Exercise_02
 		
 	public static void main(String[]args)
 	{
+		Exercise_02 price = new Exercise_02();
 		Scanner keyboard = new Scanner(System.in);
 		
 		System.out.println("What's your first item?");
@@ -30,46 +31,62 @@ public class Exercise_02
 		System.out.println("What's the price of it?");
 		double Price4 = keyboard.nextDouble();
 		
-		boolean discount = (Price1 + Price2 + Price3 + Price4) >= 2000;
-		if(discount)
-			System.out.println("<<<<<<<<<<<<<Recipt>>>>>>>>>>>>>>>>");
-			System.out.println("Discount\t.......15%");
-			System.out.println("\n");
-			form.format(Item1, Price1);
-			System.out.println("\n");
-			form.format(Item2, Price2);
-			System.out.println("\n");
-			form.format(Item3, Price3);
-			System.out.println("\n");
-			form.format(Item4, Price4);
-			System.out.println("\n");
-			System.out.println("\n");
-			System.out.println("Total\t......." + ((Price1+Price2+Price3+Price4)*0.75));
-			System.out.println("_______________________________________________");
+		String Item5 = "Subtotal";
+		
+		double Price5 = Price1 + Price2 + Price3 + Price4;
+		
+		String Item6 = "Discount"; 
+		
+		double Price6 = price.discount(Price5);
+		
+		String Item7 = "Tax";
+
+		double Price7 = (Price1 + Price2 + Price3 + Price4)*0.065;
+		
+		String Item8 = "total";
+		
+		double Price8 = Price5 - Price6 + Price7;
+		
+	
+		
+		
+		
+		
+		System.out.println("<<<<<<<<<<<<<Recipt>>>>>>>>>>>>>>>>");
+		System.out.println("\n");
+		form.format(Item1, Price1);
+		System.out.println("\n");
+		form.format(Item2, Price2);
+		System.out.println("\n");
+		form.format(Item3, Price3);
+		System.out.println("\n");
+		form.format(Item4, Price4);
+		System.out.println("\n");
+		form.format(Item5, Price5);
+		System.out.println("\n");
+		form.format(Item6, Price6);
+		System.out.println("\n");
+		form.format(Item7, Price7);
+		System.out.println("\n");
+		form.format(Item8, Price8);
+		System.out.println("_______________________________________________");
+		System.out.println("\n");
+		System.out.println("Thank you");
 			
-		if(!discount)
-			System.out.println("<<<<<<<<<<<<<Recipt>>>>>>>>>>>>>>>>");
-			System.out.println("Discount\t.......0%");
-			System.out.println("\n");
-			form.format(Item1, Price1);
-			System.out.println("\n");
-			form.format(Item2, Price2);
-			System.out.println("\n");
-			form.format(Item3, Price3);
-			System.out.println("\n");
-			form.format(Item4, Price4);
-			System.out.println("\n");
-			System.out.println("\n");
-			System.out.println("Total\t......." + (Price1+Price2+Price3+Price4));
-			System.out.println("_______________________________________________");
 			
 		
-			
+		public static void discount(double price5);
+		if (Price5>= 2000)
+			return Price5*0.15;
+		if (!Price5>= 2000)
+			return 0;
+		
 		
 	}
+	
 	public void format(String Item, double Price)
 	{
-		System.out.printf("\n*%17s\t....... %10.2f", Item, Price);
+		 System.out.printf("\n*%17s\t....... %10.2f", Item, Price);
 	}
 	
 }

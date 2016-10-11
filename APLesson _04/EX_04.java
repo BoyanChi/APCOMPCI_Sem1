@@ -10,7 +10,7 @@ public class EX_04
 		System.out.println("What's the height of your box in inches?");
 		Double height = keyboard.nextDouble();
 
-		System.out.println("What't the plength of your box in inches?");
+		System.out.println("What's the length of your box in inches?");
 		Double length = keyboard.nextDouble();
 
 		System.out.println("What's the width of your box in inches?");
