@@ -27,7 +27,7 @@ public class Exercise_05
 			{
 				System.out.println("Would you like to go to England or France?");
 				String ecountry = keyboard.next();
-				if(ecountry equals ("England"))
+				if(ecountry.equals ("England"))
 				{
 					System.out.println("You went to England and had a great time there.");
 				}
@@ -45,7 +45,7 @@ public class Exercise_05
 			{
 				System.out.println("Would you like to go to Egypt or Algeria?");
 				String ACOUNTRY = keyboard.next();
-				if(ACOUNTRY equals ("Egypt"))
+				if(ACOUNTRY.equals ("Egypt"))
 				{
 					System.out.println("You went to Egypt and had a great time there.");
 				}
