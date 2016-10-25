@@ -10,7 +10,7 @@ public class EX_04
 		int num = keyboard.nextInt();
 		System.out.println("Please enter the size of your table.");
 		int size = keyboard.nextInt();
-		System.out.println("number        |          result");
+		System.out.println("number    |      result");
 		for(int i = 1; i <= size;  i++)
 		{
 			int c = i*num;
