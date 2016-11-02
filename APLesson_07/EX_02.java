@@ -21,5 +21,6 @@ public class EX_02
 			average += num % 10;
 			num /= 10;
 		}
+		average = average/digits;
 	}
 }
