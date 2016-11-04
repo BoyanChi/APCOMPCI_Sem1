@@ -14,7 +14,7 @@ public class Lesson_02
 		String HS = "CA";
 		String is ="92130";
 		
-		System.out.println(the + "," + address  + " \n" + TP + "," + HS + " " + is);
+		System.out.println(the + " " + address  + " \n" + TP + "," + HS + " " + is);
 		
 		
 		int l = 2;
