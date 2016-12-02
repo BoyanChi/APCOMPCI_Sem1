@@ -27,12 +27,11 @@ public class EX_05
 	}
 	public static void getOdds(int [] numbers)
 	{
-		int [] odds = new int[10];
-		for(int i = 0; i < numbers.length; i++)
+		String odds = "";
 			for(int num : numbers)
 			{
-				if ((num & 2) == 0)
-				odds[i] = num;
+				if (num % 2 == 1)
+				odds += num + " ";
 			
 			}
 		System.out.print(" " + odds + " ");

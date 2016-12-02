@@ -8,6 +8,7 @@ public class EX_07
 		fillArray(words);
 		System.out.print("For the words...");
 		printArray(words);
+		System.out.print("");
 		System.out.print("Only");
 		hasZs(words);
 		System.out.print("contain(s) the letter z.");
@@ -27,12 +28,12 @@ public class EX_07
 	}
 	public static void hasZs(String [] words)
 	{
-		String zs;
+		String zs = "";
 		for(String word:words)
 		{
 			if (word.indexOf("z") >= 0)
 			{
-				word += zs;
+				zs += word + " ";
 			}
 		}
 		System.out.print(" " + zs + " ");
