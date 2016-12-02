@@ -11,7 +11,8 @@ public class EX_02
 		
 		for(int i = 1 ;i <= num; i++)
 		{
-			System.out.println("The factorial is" + fac*i);
+			fac *= i;
 		}
+		System.out.println(fac);
 	}
 }
