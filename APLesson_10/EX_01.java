@@ -11,13 +11,13 @@ public class EX_01
 		gFactor(nums);
 		removePrimes(nums);
 	}
-	public static int gFactor(int [] nums)
+	public static int gFactor(ArrayList<Integer> nums)
 	{
 		System.out.println("Please enter a number as parameter");
 		int n = keyboard.nextInt(); 
-		for (int number : nums)
+		for (int i = 2; i <= n; i++)
 		{
-			if((n % number) == 0)
+			if((n % i) == 0)
 			{
 				return 1;
 			}
@@ -27,16 +27,16 @@ public class EX_01
 			}
 		}
 	}
-	public static void removePrimes(int [] nums)
+	public static void removePrimes(ArrayList<Integer> nums)
 	{
-		for (int i = 0; i <= nums.size; i++)
+		for (int i = 0; i <= nums.size(); i++)
 		{
-			if (gFactor(i) = 0)
+			if (gFactor.get(i) == 0)
 			{				
 				nums.remove(i);
 				i -= 1;
 			}
+			System.out.print(" " + i + " ");	
 		}
-		System.out.print(" " + i + " ");	
 	}
 }
