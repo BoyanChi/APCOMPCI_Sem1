@@ -49,7 +49,26 @@ public class EX_05_1
 	}
 	public static void reload()
 	{
-		if(bulletCount >=)
+		if(bulletCount >= CLIPSIZE)
+		{
+			bulletCount -= CLIPSIZE
+			shotCount == CLIPSIZE
+		}
+		else
+		{
+			shotCount == bulletCount
+			bulletCount = 0
+		}
+		resetClip();
+		for(int i = 0; i < shotCount; i++)
+		{
+			clip[i] = "* ";
+		}
+	}
+	public static void printClip()
+	{
+		String output;
+		
 	}
 }
 		
