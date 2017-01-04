@@ -32,43 +32,46 @@ public class EX_05_1
 	public static void resetClip(String [] clip)
 	{
 		for(int i = 0; i < clip.length; i++)
-			clip.set(i,"[]")
+			clip.set(i,"[]");
 	}
 	public static String shoot(String [] clip)
 	{
 		if(shootCount > 0)
 		{
-			clip.set(shotCount - 1,"[]")
+			clip.set(shotCount - 1,"[]");
 			shotCount--;
-			return "Boom!!!"
+			return "Boom!!!";
 		}
 		else
 		{
-			return "Reload!!!"
+			return "Reload!!!";
 		}
 	}
 	public static void reload()
 	{
 		if(bulletCount >= CLIPSIZE)
 		{
-			bulletCount -= CLIPSIZE
-			shotCount == CLIPSIZE
+			bulletCount -= CLIPSIZE;
+			shotCount = CLIPSIZE;
 		}
 		else
 		{
-			shotCount == bulletCount
-			bulletCount = 0
+			shotCount = bulletCount;
+			bulletCount = 0;
 		}
 		resetClip();
 		for(int i = 0; i < shotCount; i++)
 		{
-			clip[i] = "* ";
+			clip[i] = "*";
 		}
 	}
 	public static void printClip()
 	{
 		String output;
-		
+		output = ("Bullets:" + "\t" + bulletCount + "\n" + "Clip:" + "\t");
+		for(int k = 0; k < CLIPSIZE; K++)
+			output += k;
+		System.out.println(output);
 	}
 }
 		
