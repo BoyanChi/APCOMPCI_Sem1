@@ -7,24 +7,26 @@ public class EX_05_1
 	static int CLIPSIZE = 16;
 	static int bulletCount;
 	static int shotCount;
+	static String [] clip;
 	public static void main(String[]args)
 	{
 		int bulletCount = 96;
 		int shotCount = 0;
 		String [] clip = new String[CLIPSIZE];
+		int i;
 		clip[i] = "i";
 		resetClip(clip);
 		while (bulletCount > 0 || shotCount > 0)
 		{
 			System.out.println("Action:");
 			String action = keyboard.next();
-			if (action = "R")
+			if (action == "R")
 			{
 				reload();
 			}
-			if (action = "S")
+			if (action == "S")
 			{
-				System.out.print(shoot());
+				System.out.print(shoot(clip));
 			}
 		}
 		printClip();
@@ -36,7 +38,7 @@ public class EX_05_1
 	}
 	public static String shoot(String [] clip)
 	{
-		if(shootCount > 0)
+		if(shotCount > 0)
 		{
 			clip.set(shotCount - 1,"[]");
 			shotCount--;
@@ -69,7 +71,7 @@ public class EX_05_1
 	{
 		String output;
 		output = ("Bullets:" + "\t" + bulletCount + "\n" + "Clip:" + "\t");
-		for(int k = 0; k < CLIPSIZE; K++)
+		for(int k = 0; k < CLIPSIZE; k++)
 			output += k;
 		System.out.println(output);
 	}
