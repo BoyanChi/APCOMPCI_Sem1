@@ -4,7 +4,7 @@ public class Distance
 {
 	private int xOne, yOne, xTwo, yTwo;
 	private double distance;
-	public distance()
+	public Distance()
 	{
 		xOne = 0;
 		yOne = 0;
@@ -12,21 +12,19 @@ public class Distance
 		yTwo = 0;
 		distance = 0;
 	}
-	public distance(int x, int y, int xx, int yy, double distance)
+	public Distance(int x, int y, int xx, int yy)
 	{
 		xOne = x;
 		yOne = y;
 		xTwo = xx;
 		yTwo = yy;
-		distance = 0;
 	}
-	public void setvalues(int x, int y, int xx, int yy, double distance)
+	public void setvalues(int x, int y, int xx, int yy)
 		{
 		xOne = x;
 		yOne = y;
 		xTwo = xx;
 		yTwo = yy;
-		distance = 0;
 	}
 	public double getDist()
 	{
