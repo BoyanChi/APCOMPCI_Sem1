@@ -10,8 +10,8 @@ public class EX_05_1
 	static String [] clip;
 	public static void main(String[]args)
 	{
-		int bulletCount = 96;
-		int shotCount = 0;
+		bulletCount = 96;
+		shotCount = 0;
 		String [] clip = new String[CLIPSIZE];
 		int i;
 		clip[i] = "i";
@@ -34,7 +34,7 @@ public class EX_05_1
 	public static void resetClip(String [] clip)
 	{
 		for(int i = 0; i < clip.length; i++)
-			clip.set(i,"[]");
+			clip.[i] = "[]";
 	}
 	public static String shoot(String [] clip)
 	{
