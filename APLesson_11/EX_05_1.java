@@ -12,10 +12,8 @@ public class EX_05_1
 	{
 		bulletCount = 96;
 		shotCount = 0;
-		String [] clip = new String[CLIPSIZE];
-		int i;
-		clip[i] = "i";
-		resetClip(clip);
+		clip = new String[CLIPSIZE];
+		resetClip();
 		while (bulletCount > 0 || shotCount > 0)
 		{
 			System.out.println("Action:");
@@ -26,21 +24,22 @@ public class EX_05_1
 			}
 			if (action == "S")
 			{
-				System.out.print(shoot(clip));
+				System.out.print(shoot());
 			}
+			printClip();
 		}
-		printClip();
+		System.out.println("Out of Bullets!");
 	}
-	public static void resetClip(String [] clip)
+	public static void resetClip()
 	{
 		for(int i = 0; i < clip.length; i++)
-			clip.[i] = "[]";
+			clip[i] = "[]";
 	}
-	public static String shoot(String [] clip)
+	public static String shoot()
 	{
 		if(shotCount > 0)
 		{
-			clip.set(shotCount - 1,"[]");
+			clip[shotCount - 1] = "[]";
 			shotCount--;
 			return "Boom!!!";
 		}
@@ -69,10 +68,10 @@ public class EX_05_1
 	}
 	public static void printClip()
 	{
-		String output;
+		String output = "";
 		output = ("Bullets:" + "\t" + bulletCount + "\n" + "Clip:" + "\t");
-		for(int k = 0; k < CLIPSIZE; k++)
-			output += k;
+		for(int i = 0; i < CLIPSIZE; i++)
+			output += clip[i];
 		System.out.println(output);
 	}
 }

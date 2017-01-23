@@ -15,6 +15,7 @@ public class MilesPerHour
 		distance = d;
 		hours = h;
 		minutes = min;
+		mph = 0;
 	}
 	public void setvalues(int d, int h, int min)
 		{
