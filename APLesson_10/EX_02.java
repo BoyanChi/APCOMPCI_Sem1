@@ -21,13 +21,18 @@ public class EX_02
 				if (equation.get(i).equals("*"))
 				{
 					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) * Integer.parseInt(equation.get(i+1))));
+					equation.remove(i-1);
+					equation.remove(i);
 				}
 				else
 				{
 					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) / Integer.parseInt(equation.get(i+1))));
+					equation.remove(i-1);
+					equation.remove(i);
 				}
-				equation.remove(i-1);
-				equation.remove(i);
+			}
+			else
+			{		
 				i += 1;
 			}
 		
@@ -36,16 +41,21 @@ public class EX_02
 		{
 			if (equation.get(i).equals("+") || equation.get(i).equals("-"))
 			{
-				if (equation.get(i).equals("*"))
+				if (equation.get(i).equals("+"))
 				{
 					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) + Integer.parseInt(equation.get(i+1))));
+					equation.remove(i-1);
+					equation.remove(i);
 				}
 				else
 				{
 					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) - Integer.parseInt(equation.get(i+1))));
+					equation.remove(i-1);
+					equation.remove(i);
 				}
-				equation.remove(i-1);
-				equation.remove(i);
+			}
+			else
+			{		
 				i += 1;
 			}
 		}
