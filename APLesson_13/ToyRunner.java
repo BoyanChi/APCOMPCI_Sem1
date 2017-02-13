@@ -6,5 +6,6 @@ public class ToyRunner
 	{
 		AFigure afigure = new AFigure();
 		Car car = new Car();
+		
 	}
 }

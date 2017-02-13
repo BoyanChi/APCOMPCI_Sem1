@@ -23,7 +23,7 @@ public class toy
 	}
 	public String setName()
 	{
-	
+		
 	}
 	public int setCount()
 	{
@@ -31,7 +31,7 @@ public class toy
 	} 
 	abstract class getType()
 	{
-		
+		return type;
 	}
 	public String toString()
 	{
