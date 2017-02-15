@@ -1,16 +1,27 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 public class ToyStore
 {
-	ArrayList<toy> Toy = new ArrayList<toy>();
+	private ArrayList<toy> toyList ;
+	public Toystore()
+	{
+		toyList = new ArrayList<toy>();
+		loadToys("");
+	}
+	public Toystore(String T)
+	{
+		toyList = new ArrayList<toy>();
+		loadToys(T);
+	}
 	public String loadToys()
 	{
-		String[]toys;
-		for(int i = 0, 0 < i < toys.size)
+		ArrayList<String>toys = new ArrayList<String>(Arrays.asList(ts.split(", ")))
+		String name;
+		for(int i = 0, i < toys.size(), i += 1)
 		{
-			String ts = "";
-			String name = toys[i];
-			String type = toy[i+1];
-			String Toy = getThatToy(name);
+			String name = toys.get(i);
+			String type = toys.grt(i+1);
+			if String Toy = getThatToy(name);
 			{
 				if return null
 				{
@@ -23,9 +34,8 @@ public class ToyStore
 			}
 		}
 	}
-	public String getThatToy(Toy)
+	public boolean getThatToy(String nm)
 	{
-		 int nm = "";
 		 for(int i = 0, i < Toy.length, i++)
 			if (Toy[i] == nm)
 			{

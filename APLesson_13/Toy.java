@@ -5,12 +5,12 @@ public class toy
 
 	public toy()
 	{
-		this.toy = "";
+		this.name = "";
 		this.count = 1;
 	}
-	public toy(String t)
+	public toy(String n)
 	{
-		this.toy = t;
+		this.name = n;
 		this.count = 1;
 	}
 	public String getName()
@@ -21,13 +21,13 @@ public class toy
 	{
 		return count;
 	}
-	public String setName()
+	public void setName(String n)
 	{
-		
+		this.name = n
 	}
-	public int setCount()
+	public void setCount(Int t)
 	{
-	
+		this.count = c;
 	} 
 	abstract class getType()
 	{

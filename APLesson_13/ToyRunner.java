@@ -7,5 +7,9 @@ public class ToyRunner
 		AFigure afigure = new AFigure();
 		Car car = new Car();
 		
+		System.out.print(afigure);
+		System.out.print("\n");
+		System.out.print(car);
+		
 	}
 }
