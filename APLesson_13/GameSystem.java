@@ -1,22 +1,22 @@
 public class GameSystem
 {
-	private String platform
-	private int serialNo
-	public GameSystem
+	private String platform;
+	private int serialNo;
+	public GameSystem()
 	{
 		this.platform = "";
-		this.serialNo = 1;
+		this.serialNo = (int)(Math.random() * 1000000);
 	}
-	public GameSystem(String platform, int serialNo)
+	public GameSystem(String p)
 	{
 		this.platform = p;
-		this.serialNo = (int)(Math.random() * 7) + 1;
+		this.serialNo = (int)(Math.random() * 1000000);
 	}
-	public String getplatform()
+	public String getPlatform()
 	{
 		return platform;
 	}
-	public int getserialNo()
+	public int getSerialNo()
 	{
 		return serialNo;
 	}

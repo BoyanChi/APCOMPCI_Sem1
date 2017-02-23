@@ -13,58 +13,83 @@ public class ToyStore
 		toyList = new ArrayList<toy>();
 		loadToys(T);
 	}
-	public String loadToys()
+	public String loadToys(String TS)
 	{
 		ArrayList<String>toys = new ArrayList<String>(Arrays.asList(ts.split(", ")))
 		String name;
 		for(int i = 0, i < toys.size(), i += 1)
 		{
-			String name = toys.get(i);
-			String type = toys.grt(i+1);
-			if String Toy = getThatToy(name);
+			name = toys.get(i);
+			String type = toys.get(i+1);
+			if (type.equals("AF");
 			{
-				if return null
+				AFigure object = new AFigure(name)
+				if (getThatToy(name))
 				{
-					Toy.add "toy";
+					object.setCount(object.gteCount() + 1);
+					for(int j = 0; j < toyList.size(); j += 1)
+					{
+						if(toyList.get(j).getName().equals(object.getName()))
+						{
+							toyList.set(j,object);
+						}
+					}
 				}
-				else
+				else toyList.add(object);
+			}
+			else
+			{
+				Car Object = New Car(name)
+				if(getThatToy(name0))
 				{
-					count += 1;
-				}
+					Object.setCount(Object.getCount() + 1)
+					for(int j = 0; j < toyList.size(); j += 1)
+					{
+						if(toyList.get(j).getName.equals(Object.getName()))
+						{
+							toyList.set(j,Object)
+						}
+							
+					}
+				}	
 			}
 		}
 	}
 	public boolean getThatToy(String nm)
 	{
-		 for(int i = 0, i < Toy.length, i++)
-			if (Toy[i] == nm)
+		 for(Toy object : toylist)
+			if (object.getName().equals(nm))
 			{
-				return toy
+				return true;
 			}
 			else
 			{
-				return null
+				return false;
 			}
 				
 	}
 	public String getMostFrequentToy(Toy)
 	{
 		String name = "";
-		int max = 
-		for(int i = 0, i < Toy.length, i++)
-			if(i < count || i = count || name = Toy[i])
-				return name;
+		int max = Integer.MIN_VALUE;
+		for(Toy object : toylist)
+			if(max < object.getCount)
+			{
+				max = object.getCount;
+				name = object.getName;
+			}
+		return name;
 	}
-	public String getMostFrequentType(Toy)
+	public String getMostFrequentType()
 	{
 		int cars = 0;
 		int figures = 0;
-		for(int i = 0, i < Toy.length, i++)
-			if(Toy[i] = Car)
+		for(Toy object : toylist)
+			if(object.getType().equals("Car"))
 			{
 				cars += 1;
 			}
-			if(Toy[i] = AF)
+			if(object.getType().equals("Action Figure"))
 			{
 				figure += 1;
 			}
@@ -81,9 +106,9 @@ public class ToyStore
 			return "Equal amounts of action figures and cars!";
 		}
 	}
-	public toString()
+	public String toString()
 	{
-		return toyList;
+		return toyList.toString;
 	}
 
 }
