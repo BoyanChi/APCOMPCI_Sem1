@@ -4,12 +4,12 @@ public class AFigure extends Toy
 	{
 		super();
 	}
-	public name(String n)
+	public AFigure(String n)
 	{
 		super(n);
 	}
-	abstract class getType()
+	public String getType()
 	{
-		return Action Figure;
+		return "Action Figure";
 	}
 }

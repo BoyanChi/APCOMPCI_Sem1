@@ -9,7 +9,7 @@ public class Advance extends Ticket
 	{
 		this.daysLeft = d;
 	}
-	public double getPrice
+	public double getPrice()
 	{
 		if(daysLeft >= 10)
 		{

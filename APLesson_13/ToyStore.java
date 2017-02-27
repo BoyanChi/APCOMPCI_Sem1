@@ -2,31 +2,31 @@ import java.util.ArrayList;
 import java.util.Arrays;
 public class ToyStore
 {
-	private ArrayList<toy> toyList ;
-	public Toystore()
+	private ArrayList<Toy> toyList ;
+	public ToyStore()
 	{
-		toyList = new ArrayList<toy>();
+		toyList = new ArrayList<Toy>();
 		loadToys("");
 	}
-	public Toystore(String T)
+	public ToyStore(String t)
 	{
-		toyList = new ArrayList<toy>();
-		loadToys(T);
+		toyList = new ArrayList<Toy>();
+		loadToys(t);
 	}
-	public String loadToys(String TS)
+	public void loadToys(String ts)
 	{
-		ArrayList<String>toys = new ArrayList<String>(Arrays.asList(ts.split(", ")))
+		ArrayList<String>toys = new ArrayList<String>(Arrays.asList(ts.split(", ")));
 		String name;
-		for(int i = 0, i < toys.size(), i += 1)
+		for(int i = 0; i < toys.size(); i += 1)
 		{
 			name = toys.get(i);
 			String type = toys.get(i+1);
-			if (type.equals("AF");
+			if (type.equals("AF"))
 			{
-				AFigure object = new AFigure(name)
+				AFigure object = new AFigure(name);
 				if (getThatToy(name))
 				{
-					object.setCount(object.gteCount() + 1);
+					object.setCount(object.getCount() + 1);
 					for(int j = 0; j < toyList.size(); j += 1)
 					{
 						if(toyList.get(j).getName().equals(object.getName()))
@@ -39,44 +39,41 @@ public class ToyStore
 			}
 			else
 			{
-				Car Object = New Car(name)
-				if(getThatToy(name0))
+				Car Object = new Car(name);
+				if(getThatToy(name))
 				{
-					Object.setCount(Object.getCount() + 1)
+					Object.setCount(Object.getCount() + 1);
 					for(int j = 0; j < toyList.size(); j += 1)
 					{
-						if(toyList.get(j).getName.equals(Object.getName()))
+						if(toyList.get(j).getName().equals(Object.getName()))
 						{
-							toyList.set(j,Object)
+							toyList.set(j,Object);
 						}
 							
 					}
 				}	
-			}
-		}
+			 }
+		 }
 	}
 	public boolean getThatToy(String nm)
 	{
-		 for(Toy object : toylist)
+		 for(Toy object : toyList)
 			if (object.getName().equals(nm))
 			{
 				return true;
 			}
-			else
-			{
-				return false;
-			}
+			return false;
 				
 	}
-	public String getMostFrequentToy(Toy)
+	public String getMostFrequentToy()
 	{
 		String name = "";
 		int max = Integer.MIN_VALUE;
-		for(Toy object : toylist)
-			if(max < object.getCount)
+		for(Toy object : toyList)
+			if(max < object.getCount())
 			{
-				max = object.getCount;
-				name = object.getName;
+				max = object.getCount();
+				name = object.getName();
 			}
 		return name;
 	}
@@ -84,14 +81,14 @@ public class ToyStore
 	{
 		int cars = 0;
 		int figures = 0;
-		for(Toy object : toylist)
+		for(Toy object : toyList)
 			if(object.getType().equals("Car"))
 			{
 				cars += 1;
 			}
-			if(object.getType().equals("Action Figure"))
+			else if(object.getType().equals("Action Figure"))
 			{
-				figure += 1;
+				figures += 1;
 			}
 		if(cars > figures)
 		{
@@ -108,7 +105,7 @@ public class ToyStore
 	}
 	public String toString()
 	{
-		return toyList.toString;
+		return toyList.toString();
 	}
 
 }

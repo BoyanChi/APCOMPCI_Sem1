@@ -1,14 +1,14 @@
-public class toy
+public abstract class Toy
 {
-	private String toy;
+	private String name;
 	private int count;
 
-	public toy()
+	public Toy()
 	{
 		this.name = "";
 		this.count = 1;
 	}
-	public toy(String n)
+	public Toy(String n)
 	{
 		this.name = n;
 		this.count = 1;
@@ -23,18 +23,15 @@ public class toy
 	}
 	public void setName(String n)
 	{
-		this.name = n
+		this.name = n;
 	}
-	public void setCount(Int t)
+	public void setCount(int c)
 	{
 		this.count = c;
 	} 
-	abstract class getType()
-	{
-		return type;
-	}
+	public abstract String getType();
 	public String toString()
 	{
-		return """ + name + "\t" + count + """; 
+		return " " + name + "\t" + count + " "; 
 	}
 }

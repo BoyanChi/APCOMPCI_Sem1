@@ -5,7 +5,7 @@ public class ToyStoreRunner
 	{
 		Scanner keyboard = new Scanner(System.in);
 		{
-			System.out.prinln("Please enter your toy list.");
+			System.out.println("Please enter your toy list.");
 			String ToyList = keyboard.nextLine();
 			ToyStore object = new ToyStore(ToyList);
 			System.out.println("\n");

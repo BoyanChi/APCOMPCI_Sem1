@@ -1,14 +1,14 @@
 public class Car extends Toy
 {
-	public car()
+	public Car()
 	{
 		super();
 	}
-	public car(String n)
+	public Car(String n)
 	{
 		super(n);
 	}
-	abstract class getType()
+	public String getType()
 	{
 		return "Car";
 	}
