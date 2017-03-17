@@ -48,7 +48,7 @@ public class Satellite
 	   toyota.move(movement.get(2), movement.get(3));
 	   gmc.move(movement.get(4), movement.get(5));
 	   int i = 0;
-	   printout += "====================================="
+	   printout += "=====================================";
 	   for(Location l : locate)
 			{
 				printout += "\n After " + l.getID() + "Moved (" + String.format(%.2f, movement.get(i)))  +", " + String.format(%.2f, movement.get(i+1))) + ")" + "\n New Location: (" + getLocation(l.getLoc()) + ")";
