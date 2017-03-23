@@ -8,8 +8,4 @@ public class GMC extends Car
 	{
 		super(x,y);
 	}
-	public int getID()
-	{
-		return id;
-	}
 }

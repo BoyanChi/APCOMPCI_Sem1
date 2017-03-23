@@ -8,8 +8,4 @@ public class Honda extends Car
 	{
 		super(l[0], l[1]);
 	}
-	public int getID()
-	{
-		return id;
-	}
 }
