@@ -14,13 +14,13 @@ public class Magpie2
 	public String getResponse(String statement)
 	{
 		String response = "";
+		
 
-		/** Exercise_01:
-		 * ==================================================
-		 * 	Code that asks the user "Say something, please."
-		 * 	if you enter nothing, or if you accidentally hit
-		 * 	enter. Think to yourself: "What is the length of
-		 * 	an empty String?" */
+		if(statement.length() = 0)
+		{
+			response = "Say something, please.";
+		}
+		
 
 
 		/** To be completed in Exercise_02:
