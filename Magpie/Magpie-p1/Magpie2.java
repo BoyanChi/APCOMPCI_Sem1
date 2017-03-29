@@ -61,9 +61,24 @@ public class Magpie2
 	 * ========================================================= */
 	private int findKeyword(String statement, String goal, int startPos)
 	{
+		String phrase = statement.trim().toLowerCase();
+		int psn = int.indexof(goal,startPos + 1);
+		if(psn >= 0)
+		{
+			if(psn > 1)
+			{
+				before = int.substring(psn - 1, psn);
+			}
+				/*check if you can fit goal into the rest of phrase - no need to
+				proceed otherwise
+					set after = the slot in phrase after psn + length of goal */
+
+				//=====> code here
+			if(before.c)
+		}
 		/* New String variable phrase = a more searchable version of statement.
 		 	-Use a combination of trim() and toLowerCase() modify statement.
-
+		
 		   New int variable psn = the location of goal in phrase after
 		   startPos
 
