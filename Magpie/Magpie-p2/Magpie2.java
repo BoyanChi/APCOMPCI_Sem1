@@ -55,6 +55,25 @@ public class Magpie2
 			response = getRandomResponse();
 		}
 		return response;
+		else if (findKeyword(statement, "I want to", 0) >= 0)
+		{
+			response = transformIWantToStatement(statement);
+		}
+		else
+		{
+  // Look for a two word (you <something> me)
+  // pattern
+			int psn = findKeyword(statement, "you", 0);
+			if (psn >= 0&& findKeyword(statement, "me", psn) >= 0)
+			{
+				response = transformYouMeStatement(statement);
+			}
+			else
+			{
+				response = getRandomResponse();
+			}
+		}
+			return response;
 	}
 
 	/** Ex_02: The findKeyword() Method...
