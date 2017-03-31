@@ -15,43 +15,44 @@ public class ToyStore
 	}
 	public void loadToys(String ts)
 	{
-		ArrayList<String>toys = new ArrayList<String>(Arrays.asList(ts.split(", ")));
+		ArrayList<String> toys = new ArrayList<String>(Arrays.asList(ts.split(", ")));
 		String name;
-		for(int i = 0; i < toys.size(); i += 1)
+		for(int i = 0; i < toys.size(); i += 2)
 		{
 			name = toys.get(i);
 			String type = toys.get(i+1);
 			if (type.equals("AF"))
 			{
-				AFigure object = new AFigure(name);
+				AFigure object1 = new AFigure(name);
 				if (getThatToy(name))
 				{
-					object.setCount(object.getCount() + 1);
+					object1.setCount(object1.getCount() + 1);
 					for(int j = 0; j < toyList.size(); j += 1)
 					{
-						if(toyList.get(j).getName().equals(object.getName()))
+						if(toyList.get(j).getName().equals(object1.getName()))
 						{
-							toyList.set(j,object);
+							toyList.set(j,object1);
 						}
 					}
 				}
-				else toyList.add(object);
+				else toyList.add(object1);
 			}
 			else
 			{
-				Car Object = new Car(name);
+				Car Object2 = new Car(name);
 				if(getThatToy(name))
 				{
-					Object.setCount(Object.getCount() + 1);
+					Object2.setCount(Object2.getCount() + 1);
 					for(int j = 0; j < toyList.size(); j += 1)
 					{
-						if(toyList.get(j).getName().equals(Object.getName()))
+						if(toyList.get(j).getName().equals(Object2.getName()))
 						{
-							toyList.set(j,Object);
+							toyList.set(j,Object2);
 						}
 							
 					}
-				}	
+				}
+				else toyList.add(Object2);
 			 }
 		 }
 	}

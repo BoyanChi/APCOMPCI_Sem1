@@ -1,16 +1,18 @@
 public abstract class Ticket
 {
+	private int serialNo;
+	private double Price;
 	public Ticket()
 	{
-		
+		serialNo = (int)(Math.random() * 1000000);
 	}
 	public int getSerialNo()
 	{
-		return (int)(Math.random() * 1000000);
+		return serialNo;
 	}
 	public abstract double getPrice();
 	public String tostring()
 	{
-		return "Serial#: " + getSerialNo() + "\nPrice: " + getPrice();
+		return "Serial#: " + this.getSerialNo() + "\nPrice: " + this.getPrice();
 	}
 }

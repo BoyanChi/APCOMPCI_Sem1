@@ -17,7 +17,7 @@ public class Advance extends Ticket
 		}
 		else
 		{
-			return 40;
+			return 40.00;
 		}
 	}
 }

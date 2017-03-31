@@ -10,7 +10,7 @@ public class StudentAdvance extends Advance
 	}
 	public double getPrice()
 	{
-		return this.getPrice();
+		return super.getPrice()/2;
 	}
 	public String toString()
 	{
