@@ -49,6 +49,17 @@ public class Magpie2
 		 * Create addtional code (another else if) that
 		 * responds "He sounds like a pretty dank teacher"
 		 * if you mention "Robinette" in your statement */
+		 else if (statement.indexOf("cat") >= 0
+				|| statement.indexOf("dog") >= 0
+				|| statement.indexOf("fish") >= 0
+				|| statement.indexOf("turtle") >= 0)
+			response = "Tell me more about your pet";
+		}
+		else (statement.indexOf("Robinette") >= 0
+		{
+			response = "He sounds like a pretty dank teacher";
+		}
+		return response;
 
 		else
 		{
