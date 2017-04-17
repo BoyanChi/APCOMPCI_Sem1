@@ -74,18 +74,26 @@ public class Magpie2
 	{
 		String phrase = statement.trim().toLowerCase();
 		int psn = int.indexof(goal,startPos + 1);
-		if(psn >= 0)
+		while(psn >= 0)
 		{
-			if(psn > 1)
+			if(psn > 0)
 			{
 				before = int.substring(psn - 1, psn);
+			}
+			if()
+			{
+				after = phrase.substring(psn + goal.length(),psn + goal.length() + 1);
 			}
 				/*check if you can fit goal into the rest of phrase - no need to
 				proceed otherwise
 					set after = the slot in phrase after psn + length of goal */
 
 				//=====> code here
-			if(before.c)
+			if (((before.compareTo("a") < 0) && (after.compareTo("z") < 0)))
+			{
+				return psn;
+			}
+			psn = phrase.indexOf(goal, psn + 1);
 		}
 		/* New String variable phrase = a more searchable version of statement.
 		 	-Use a combination of trim() and toLowerCase() modify statement.
