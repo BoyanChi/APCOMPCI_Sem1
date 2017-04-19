@@ -4,11 +4,11 @@ public abstract class Ticket
 	private double Price;
 	public Ticket()
 	{
-		serialNo = (int)(Math.random() * 1234567) + 1;
+		
 	}
 	public int getSerialNo()
 	{
-		return serialNo;
+		return (int)(Math.random()*10000000) + 1;
 	}
 	public abstract double getPrice();
 	public String tostring()
