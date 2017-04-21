@@ -78,7 +78,7 @@ public class IntArrayWorkerTester
 //  }
   
   /** Method to test getColTotal */
-//  public static void testGetColTotal()
+  public static void testGetColTotal()
 //  {
 //    IntArrayWorker worker = new IntArrayWorker();
 //    int [][] nums2 = {{1, 2, 3}, {4, 5, 6}};
