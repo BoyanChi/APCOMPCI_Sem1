@@ -16,7 +16,76 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
-  
+  public static void testKeepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.KeepOnlyBlue();
+    beach.explore();
+  }
+  public static void testNegate()
+  {
+	Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();  
+  }
+  public static void testGrayscale()
+  {
+	Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.grayscale();
+    beach.explore();  
+  }
+  public static void testFixUnderwater()
+  {
+	Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.fixUnderwater();
+    beach.explore();  
+  }
+  public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }
+  public static void testmirrorHorizontal()
+  {
+	Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore(); 
+  }
+  public static void testmirrorHorizontalBotToTop()
+  {
+	Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
+    caterpillar.explore(); 
+  }
+  public static void testmirrorDiagonal()
+  {
+	Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorDiagonal();
+    caterpillar.explore(); 
+  }
+  public static void testmirrorArms()
+  {
+	Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore(); 
+  }
+  public static void testmirrorGull()
+  {
+	Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.mirrorGull();
+    seagull.explore(); 
+  }
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -59,13 +128,19 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
     testZeroBlue();
-    //testKeepOnlyBlue();
+    testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
-    //testFixUnderwater();
-    //testMirrorVertical();
+    testNegate();
+    testGrayscale();
+    testFixUnderwater();
+    testMirrorVertical();
+	testMirrorVerticalRightToLeft();
+	testmirrorHorizontal();
+	testmirrorHorizontalBotToTop();
+	testmirrorDiagonal();
+	testmirrorArms();
+	testmirrorGull();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
