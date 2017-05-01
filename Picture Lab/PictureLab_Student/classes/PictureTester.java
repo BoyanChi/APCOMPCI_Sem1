@@ -86,6 +86,7 @@ public class PictureTester
     seagull.mirrorGull();
     seagull.explore(); 
   }
+  public static void testCopy()
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -146,7 +147,7 @@ public class PictureTester
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
-    //testCopy();
+    testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
