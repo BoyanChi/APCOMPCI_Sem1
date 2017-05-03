@@ -87,6 +87,11 @@ public class PictureTester
     seagull.explore(); 
   }
   public static void testCopy()
+  {
+	Picture canvas = new Picture("640x480.jpg");
+    canvas.createCollage();
+    canvas.explore();
+  }
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -109,7 +114,7 @@ public class PictureTester
   public static void testCollage()
   {
     Picture canvas = new Picture("640x480.jpg");
-    canvas.createCollage();
+    canvas.myCollage();
     canvas.explore();
   }
   
@@ -118,6 +123,12 @@ public class PictureTester
   {
     Picture swan = new Picture("swan.jpg");
     swan.edgeDetection(10);
+    swan.explore();
+  }
+  public static void testEdgeDetection1()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.edgeDetection1(10);
     swan.explore();
   }
   
@@ -146,10 +157,10 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     testCopy();
-    //testEdgeDetection();
-    //testEdgeDetection2();
+    testEdgeDetection();
+    testEdgeDetection1();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);

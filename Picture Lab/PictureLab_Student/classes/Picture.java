@@ -387,9 +387,9 @@ public class Picture extends SimplePicture
   }
   public void myCollage()
   {
-	  picture flower1 = new Picture("flower1.jpg");
-	  this.copy2(flower1,10,20,0,100);
-	  his.write("mycollage.jpg");
+	  Picture flower1 = new Picture("flower1.jpg");
+	  this.copy1(flower1,10,20,0,100);
+	  this.write("mycollage.jpg");
   }
   
   /** Method to show large changes in color 
@@ -414,20 +414,36 @@ public class Picture extends SimplePicture
           leftPixel.setColor(Color.BLACK);
         else
           leftPixel.setColor(Color.WHITE);
+		
       }
     }
   }
-  public edgeDetection1(int edgeDist)
+  public void edgeDetection1(int edgeDist)
   {
-	  pixel CurrentPixel = null, test pixel = null;
-	  int testWidth = 3;
-	  int testHeight = 3;
-	  Pixel[][]pixels = this.getPixels2D();
-	  double[][]edgeAngle = newdouble[Math.round(pixels.length/testHeight)][Math.round(pixels[0].length/testWidth)];
-	  for(int row = 0; row < pixels.length - testHeight; row += testHeight)
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    Pixel topPixel = null;
+    Pixel bottomPixel = null;
+	Pixel[][] pixels = this.getPixels2D();
+	for (int row = 0; row < pixels.length - 1; row++)
+    {
+      for (int col = 0; 
+           col < pixels[0].length-1; col++)
 	  {
-		for
+		leftPixel = pixels[row][col];
+		rightPixel = pixels[row][col];
+		topPixel = pixels[row][col];
+		bottomPixel = pixels[row][col];
+		if(leftPixel.colorDistance(rightPixel.getColor()) > edgeDist || topPixel.colorDistance(bottomPixel.getColor()) > edgeDist)
+		{
+			leftPixel.setColor(Color.BLACK);	
+		}
+		else
+		{
+			leftPixel.setColor(Color.WHITE);	
+		}
 	  }
+    }
   }
   
   
